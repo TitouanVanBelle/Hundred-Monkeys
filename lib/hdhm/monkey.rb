@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative './door'
+
 module HDHM
   # It's a simple monkey that opens and closes doors
   class Monkey

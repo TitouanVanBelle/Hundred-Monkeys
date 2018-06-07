@@ -2,7 +2,7 @@
 
 require_relative '../lib/hdhm'
 
-describe Monkey do
+describe HDHM::Monkey do
   it 'is initialized with a name' do
     name = 'Booboo'
     monkey = HDHM::Monkey.new(name: name)
@@ -16,7 +16,7 @@ describe Monkey do
         monkey = HDHM::Monkey.new
         door = HDHM::Door.new(opened: true)
 
-        monkey.switch_door(door: door)
+        monkey.switch_door(door)
 
         expect(door.opened?).to be false
       end
@@ -27,7 +27,7 @@ describe Monkey do
         monkey = HDHM::Monkey.new
         door = HDHM::Door.new(opened: false)
 
-        monkey.switch_door(door: door)
+        monkey.switch_door(door)
 
         expect(door.opened?).to be true
       end

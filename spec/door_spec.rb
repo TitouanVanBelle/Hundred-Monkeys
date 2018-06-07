@@ -2,7 +2,7 @@
 
 require_relative '../lib/hdhm'
 
-describe Door do
+describe HDHM::Door do
   it 'is closed when initialized' do
     door = HDHM::Door.new
     expect(door.opened?).to be false
