@@ -14,7 +14,7 @@ module HDHM
       doors << HDHM::Door.new
     end
 
-    algorithm_a(doors, monkeys)
+    algorithm_d(doors, monkeys)
 
     doors.each_with_index.map { |door, i| door.opened? ? i + 1 : nil }.compact
   end
@@ -71,6 +71,17 @@ module HDHM
         if (one_indexed_door_index % one_indexed_monkey_index).zero?
           monkey.switch_door(door)
         end
+      end
+    end
+  end
+
+  def self.algorithm_d(doors, monkeys)
+    monkeys.each_with_index do |monkey, monkey_index|
+      step = monkey_index + 1
+      next_door_index = monkey_index
+      while next_door_index < doors.count
+        monkey.switch_door(doors[next_door_index])
+        next_door_index += step
       end
     end
   end
