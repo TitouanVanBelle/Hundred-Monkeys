@@ -4,7 +4,7 @@ require 'benchmark'
 require_relative './lib/hdhm'
 
 time = Benchmark.measure do
-  doors = HDHM.opened_doors(door_monkey_count: 100)
+  doors = HDHM.opened_doors(door_monkey_count: 10000)
 
   puts "The following doors are opened: #{doors.join(', ')}"
 end
