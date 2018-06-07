@@ -38,8 +38,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
-  rspec
+  byebug (~> 10.0.2)
+  rspec (~> 3.7.0)
   rubocop (~> 0.57.1)
 
 BUNDLED WITH

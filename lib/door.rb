@@ -1,5 +1,5 @@
 class Door
-  def initialize(opened = false)
+  def initialize(opened: false)
     @opened = opened
   end
 

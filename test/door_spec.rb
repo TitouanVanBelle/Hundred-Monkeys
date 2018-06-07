@@ -9,14 +9,14 @@ describe Door do
 
   context 'door is initialized opened' do
     it 'is open when initialized' do
-      door = Door.new(true)
+      door = Door.new(opened: true)
       expect(door.is_opened?).to be true
     end
   end
 
   describe 'close' do
     it 'closes the door' do
-      door = Door.new(true)
+      door = Door.new(opened: true)
       door.close
       expect(door.is_opened?).to be false
     end
